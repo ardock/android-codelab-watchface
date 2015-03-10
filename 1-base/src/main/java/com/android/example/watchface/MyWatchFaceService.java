@@ -173,6 +173,10 @@ public class MyWatchFaceService extends CanvasWatchFaceService {
             mHourHandLength = mCenterX - 80;
             mMinuteHandLength = mCenterX - 40;
             mSecondHandLength = mCenterX - 20;
+
+            mBackgroundBitmap = Bitmap.createScaledBitmap(mBackgroundBitmap,
+                    (int)(mBackgroundBitmap.getWidth() * mScale),
+                    (int)(mBackgroundBitmap.getHeight() * mScale), true);
         }
 
         @Override
